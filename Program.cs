@@ -32,6 +32,7 @@ namespace ConsoleApp6
             Console.ReadKey();
             Console.Clear();
             lista.Mostrar();
+            Console.WriteLine("He avanzado con mi repositorio");
         }
     }
 }
