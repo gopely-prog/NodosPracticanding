@@ -140,5 +140,26 @@ namespace ConsoleApp6
 
             Console.WriteLine("El valor no se encontró en la lista.");
         }
+        public void OrdenarMenorMayor() 
+        {
+            if (primero == null || primero.Siguiente == null) return; 
+            bool cambiado;
+            do 
+            {
+                cambiado = false;
+                Nodo actual = primero;
+                while (actual.Siguiente != null) 
+                {
+                    if (actual.Dato > actual.Siguiente.Dato) 
+                    {
+                        int temp = actual.Dato;
+                        actual.Dato = actual.Siguiente.Dato;
+                        actual.Siguiente.Dato = temp;
+                        cambiado = true;
+                    }
+                    actual = actual.Siguiente;
+                }
+            } while (cambiado);
+        }
     }   
 }
